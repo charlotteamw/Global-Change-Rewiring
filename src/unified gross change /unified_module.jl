@@ -7,6 +7,10 @@ using NLsolve
 using Statistics
 using StatsBase
 
+
+## parameters that cause one fast chain and one slow chain with a generalist top predator
+## in the generalist module, the k_litt(fast) and k_pel(slow) functions cause two different responses of the chains to global change -- in this case something like nutrient input
+## in the unified case, both chains exhibit a faster response to global change (but the slow channel has less of a response)
 @with_kw mutable struct Par
     
     r_litt = 1.0
