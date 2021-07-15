@@ -28,9 +28,9 @@ end
 
 ## equilibrium check for parameter range -- find where all species coexist (interior equilibrium)
 
-## looks like n = 0.19 to 1.66 
+## looks like n = 0.73 to 2.16
 
-vals = 0.0:0.005:1.66
+Nvals = 0.73:0.005:2.16
 nhold = fill(0.0,length(Nvals),6)
 
 for i=1:length(Nvals)

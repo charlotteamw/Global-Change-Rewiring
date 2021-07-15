@@ -11,7 +11,7 @@ using Statistics
 
 ## plotting CV 
 function cv_data()
-    Nvals = 0.185:0.005:1.66
+    Nvals = 0.73:0.005:2.16
     u0 = [0.5, 0.5, 0.3, 0.3, 0.3]
     tspan = (0.0, 10000.0)
     ts = range(0.0, 10000.0, length = 10000)
@@ -35,7 +35,7 @@ let
     cv_plot = figure()
     plot(data[:,1], data[:,2], color = "black")
     ylabel("CV", fontsize = 15)
-    xlim(0.185, 1.66)
+    xlim(0.73, 2.16)
     ylim(0.0, 0.3)
     xlabel("Global Change", fontsize = 15)
     return cv_plot
@@ -54,7 +54,7 @@ function local_max(ts)
 end
 
 function acf_data()
-    Nvals = 0.185:0.05:1.66
+    Nvals = 0.73:0.05:2.16
     u0 = [0.5, 0.5, 0.3, 0.3, 0.3]
     tspan = (0.0, 5000.0)
     ts = range(0.0, 5000.0, length = 5000)
@@ -79,6 +79,6 @@ let
     ylabel("ACF Lag 1", fontsize = 15)
     xlabel("Global Change", fontsize = 15)
     ylim(0.75, 2.0)
-    xlim(0.185, 1.66)
+    xlim(0.73, 2.16)
     return acf_plot
 end

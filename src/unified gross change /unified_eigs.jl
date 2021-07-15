@@ -24,7 +24,7 @@ end
 λ_stability(M) = maximum(real.(eigvals(M)))
 
 function n_maxeig_data()
-    Nvals = 0.185:0.005:1.66
+    Nvals = 0.73:0.005:2.16
     max_eig = zeros(length(Nvals))
     u0 = [ 0.5, 0.5, 0.3, 0.3, 0.3]
     tspan = (0.0, 10000.0)
@@ -52,6 +52,6 @@ let
     ylabel("Re(λₘₐₓ)", fontsize = 14, fontweight=:bold)
     xlabel("Nutrient Concentration", fontsize = 14, fontweight=:bold)
     ylim(-0.05, 0.025)
-    xlim(0.185, 1.66)
+    xlim(0.73, 2.16)
     return maxeigen_plot
 end

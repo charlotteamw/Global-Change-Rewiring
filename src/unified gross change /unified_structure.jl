@@ -10,7 +10,7 @@ using NLsolve
 ## omnivory & coupling data (Structural EWS)
 function structural_data(p)
     @unpack h_PC_litt, h_PC_pel, h_PR_litt, h_PR_pel, e_PC_litt, e_PC_pel, e_PR_litt, e_PR_pel, a_PR_litt, a_PR_pel, a_PC_litt,  a_PC_pel = p 
-    Nvals = 0.185:0.005:1.66
+    Nvals = 0.73:0.005:2.16
     u0 = [ 0.5, 0.5, 0.3, 0.3, 0.3]
     tspan = (0.0, 10000.0)
     ts = range(9000, 10000, length = 1000)
@@ -40,7 +40,7 @@ let
     plot(data[:,1], data[:,2], color = "blue")
     plot(data[:,1], data[:,3], color = "red")
     ylabel("Structural Change", fontsize = 15)
-    xlim(0.185, 1.66)
+    xlim(0.73, 2.16)
     ylim(0.0, 1.0)
     xlabel("Global Change", fontsize = 15)
     return structural_plot
