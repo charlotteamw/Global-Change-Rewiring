@@ -24,7 +24,7 @@ end
 λ_stability(M) = maximum(real.(eigvals(M)))
 
 function n_maxeig_data()
-    Nvals = 0.73:0.005:2.16
+    Nvals = 1.0:0.005:2.165
     max_eig = zeros(length(Nvals))
     u0 = [ 0.5, 0.5, 0.3, 0.3, 0.3]
     tspan = (0.0, 10000.0)
@@ -44,14 +44,4 @@ function n_maxeig_data()
  return hcat(collect(Nvals), max_eig)
 end
 
-let
-    data = n_maxeig_data()
-    maxeigen_plot = figure()
-    plot(data[:,1], data[:,2], color = "black")
-    hlines(0.0, 0.0, 3.0, colors="grey")
-    ylabel("Re(λₘₐₓ)", fontsize = 14, fontweight=:bold)
-    xlabel("Nutrient Concentration", fontsize = 14, fontweight=:bold)
-    ylim(-0.05, 0.025)
-    xlim(0.73, 2.16)
-    return maxeigen_plot
-end
+
