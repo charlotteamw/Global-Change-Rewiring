@@ -11,7 +11,7 @@ using NLsolve
 let
     u0 = [0.5, 0.5, 0.3, 0.3, 0.3]
     t_span = (0, 10000.0)
-    p = Par(n = 1.3)
+    p = Par(n = 1.4)
     ts = range(0.0, 5000.0, length = 5000)
     prob = ODEProblem(model!, u0, t_span, p)
     sol = solve(prob, reltol = 1e-15)
